@@ -87,16 +87,37 @@
         <!-- Added 2 rows and then 2 cards -->
 
         <div class="col-md-8" id="weatherDisplayAreaTotal">
-            <div class="row" id="rowOneOfTwoColSearchCitiesAndRecentCities"></div>
+
+
+            <div class="row" id="selectedCityAreaTotal">
                 <!-- Search Cities Container-->
                 <!-- Styled to width 100% to reach maximum widht of container-->
-                <div class="card border-dark" id="containerCitySelectedWeather" style="width: 100%">
+                <div class="card border-dark" id="areaCitySelectedWeather" style="width: 100%">
 
                     <!-- Card Header "Search for a City"-->
-                    <div class="card-header" id="cardCitySelected">Place Holder Text City Selected</div>
-                </div>
+                    <div class="card-header" id="currentCityDate">Place Holder Text City Selected</div>
 
-            <div class="row" id="rowTwoOfTwoColSearchCitiesAndRecentCities"></div>
+                    <!-- Card Body Whole Thing / Info: Temperature / Humidity / WindSpeed / UV Index-->
+                    <div class="card-body text-dark" id="currentCityBody">
+
+                        <!-- Wraping. Next is rows with each -->
+                        <div class="col-8 m-coly">
+
+                            <!-- Here go the rows: Temperature / Humidity / WindSpeed / UV Index -->
+                            <div class="row my-row">Temperature:</div>
+                            <div class="row my-row">Humidity:</div>
+                            <div class="row my-row">Wind Speed:</div>
+                            <div class="row my-row">UV Index:</div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="row" id="fiveDayForecastAreaTotal">
 
                 <!-- Recent Cities Container-->
                 <!-- Styled to width 100% to reach maximum widht of container-->
@@ -105,7 +126,9 @@
                     <!-- Card Header "Recent Cities"-->
                     <div class="card-header" id="cardFiveDayForecast">5 Day Forecast</div>
                 </div>
+            </div>
 
+                
         </div>
 
         </div>
