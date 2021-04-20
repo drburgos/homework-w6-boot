@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- Step 0: Required meta tags-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Step 1: added Bootstrap-->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Step 3: modified Title-->
+    <title>Homework W6</title>
+</head>
+
+
+<body>
+<!-- ------------------------------------------------------------- -->
+<!-- Step 3: HTML Tags and Framework-->
+    <!-- Step 3.1 NavBar-->
+        <!-- Source and formating: https://getbootstrap.com/docs/4.0/components/navbar/ -->
+        <nav class="navbar navbar-dark bg-primary d-flex justify-content-center">
+            <!--title/logo in nav bar -->
+              <a class="navbar-brand" href="#">Weather Dashboard</a>
+        </nav>
+
+<!-- ------------------------------------------------------------- -->
+    <!-- Step 3.2 Body Tables-->
+        <!-- Intuition: we'll be using a whole body containter (middle of nav bar and footer), then a row with with two columns 4 & 8, they will be subdivided into 2  rows (containers will be fixed containers and not fluid) -->
+        <!-- General Source: https://getbootstrap.com/docs/4.0/layout/overview/#containers-->
+        <!-- Alignment Source: https://getbootstrap.com/docs/4.0/layout/overview/#containers-->
+
+    <div class="container" id="wholeBodyContainer">
+        <div class="row" id="rowWholeBodyContainer">
+
+        <!-- 3.3 Added 1/2 separate columns: One for Search City and Recent Cities (4 long) -->
+        <!-- Added 2 rows and then 2 cards -->
+
+            <div class="col-md-4" id="colSearchCitiesAndRecentCities">
+                <div class="row" id="rowOneOfTwoColSearchCitiesAndRecentCities">
+                    <!-- Search Cities Container-->
+                    <!-- Styled to width 100% to reach maximum widht of container-->
+                    <div class="card border-dark" id="containerSearchCities" style="width: 100%">
+
+                        <!-- Card Header "Search for a City"-->
+                        <div class="card-header" id="headerSearchForCity">Search for a City</div>
+
+                        <!-- Card Body "Search for a City"-->
+                        <div class="card-body" id="bodySearchForCity">
+
+                             <!-- Input Box Grouping Source: https://getbootstrap.com/docs/4.0/components/input-group/ -->
+                            <div class="input-group" id="enterCityArea">
+
+                                <!-- Text Box -->
+                                <input type="text" class="form-control" placeholder="Enter City">
+
+                                <!-- Search Button (wrapped by a div) -->
+                                <!-- Source: https://getbootstrap.com/docs/4.0/components/buttons/#outline-buttons-->
+                                <div>
+                                    <button type="button" class="btn btn-outline-secondary" type="button" id="searchButton">Search</button>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>       
+
+                <div class="row" id="rowTwoOfTwoColSearchCitiesAndRecentCities">
+
+                    <!-- Recent Cities Container-->
+                    <!-- Styled to width 100% to reach maximum widht of container-->
+                    <div class="card border-dark" id="containerRecentCities" style="width: 100%">
+
+                        <!-- Card Header "Recent Cities"-->
+                        <div class="card-header" id="cardRecentCities">Recent Cities</div>
+                    </div>
+                </div>
+
+            </div>
+
+        <!-- 3.4 Added 2/2 separate columns: One for City Selection and Five Day Forecast (8 long) -->
+        <!-- Added 2 rows and then 2 cards -->
+
+        <div class="col-md-8" id="weatherDisplayAreaTotal">
+            <div class="row" id="rowOneOfTwoColSearchCitiesAndRecentCities"></div>
+                <!-- Search Cities Container-->
+                <!-- Styled to width 100% to reach maximum widht of container-->
+                <div class="card border-dark" id="containerCitySelectedWeather" style="width: 100%">
+
+                    <!-- Card Header "Search for a City"-->
+                    <div class="card-header" id="cardCitySelected">Place Holder Text City Selected</div>
+                </div>
+
+            <div class="row" id="rowTwoOfTwoColSearchCitiesAndRecentCities"></div>
+
+                <!-- Recent Cities Container-->
+                <!-- Styled to width 100% to reach maximum widht of container-->
+                <div class="card border-dark" id="containerCitySelectedFiveDayForecast" style="width: 100%">
+
+                    <!-- Card Header "Recent Cities"-->
+                    <div class="card-header" id="cardFiveDayForecast">5 Day Forecast</div>
+                </div>
+
+        </div>
+
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------- -->
+    <!-- Step 3.3 Footer-->
+        <!-- Official Bootstrap documentation does not contain a footer component so aded a formated div-->
+
+  <!-- Copyright -->
+  <div class="text-center p-3 bg-primary">
+    © 2021 Copyright:
+    <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+
+<!-- ------------------------------------------------------------- -->
+<!-- Step 2: added Bootstrap JS functionality-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
