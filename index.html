@@ -77,7 +77,30 @@
                     <div class="card border-dark" id="containerRecentCities" style="width: 100%">
 
                         <!-- Card Header "Recent Cities"-->
+                        
                         <div class="card-header" id="cardRecentCities">Recent Cities</div>
+
+                        <!-- Buttons were formated as secondary and block size-->
+                        <!-- Formating source: https://getbootstrap.com/docs/4.0/components/buttons/-->
+                        <div class="card">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-outline-secondary btn-block">City 1</button>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-outline-secondary btn-block">City 2</button>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-body">
+                                <button type="button" class="btn btn-outline-secondary btn-block">City 3</button>
+                            </div>
+                        </div>
+
+
                     </div>
                 </div>
 
@@ -88,9 +111,8 @@
 
         <div class="col-md-8" id="weatherDisplayAreaTotal">
 
-
-            <div class="row" id="selectedCityAreaTotal">
-                <!-- Search Cities Container-->
+            <!-- Searched City Container-->
+            <div class="row justify-content-center" id="selectedCityAreaTotal">
                 <!-- Styled to width 100% to reach maximum widht of container-->
                 <div class="card border-dark" id="areaCitySelectedWeather" style="width: 100%">
 
@@ -104,10 +126,10 @@
                         <div class="col-8 m-coly">
 
                             <!-- Here go the rows: Temperature / Humidity / WindSpeed / UV Index -->
-                            <div class="row my-row">Temperature:</div>
-                            <div class="row my-row">Humidity:</div>
-                            <div class="row my-row">Wind Speed:</div>
-                            <div class="row my-row">UV Index:</div>
+                            <div class="row my-row" id="currentTemperature">Temperature:</div>
+                            <div class="row my-row" id="currentHumidity">Humidity:</div>
+                            <div class="row my-row" id="currentWindSpeed">Wind Speed:</div>
+                            <div class="row my-row" id="currentUvIndex">UV Index:</div>
 
                         </div>
 
@@ -116,22 +138,124 @@
                 </div>
             </div>
 
-
-            <div class="row" id="fiveDayForecastAreaTotal">
+            <!-- 5 Day Forecast Container-->
+            <div class="row my-row" id="fiveDayForecastAreaTotal">
 
                 <!-- Recent Cities Container-->
                 <!-- Styled to width 100% to reach maximum widht of container-->
                 <div class="card border-dark" id="containerCitySelectedFiveDayForecast" style="width: 100%">
 
-                    <!-- Card Header "Recent Cities"-->
+                    <!-- Card Header "5 Day Forecast"-->
                     <div class="card-header" id="cardFiveDayForecast">5 Day Forecast</div>
+
+                    <!-- Card Body 5 Days-->
+                    <div class="card-body card5day-body text-dark">
+
+                        <!-- Container for the 5 cards / 1 for each day-->
+                        <div class="row justify-content-center" id="card5DayContainer">
+
+                            <!-- Each card has, in turn 2 containers: One for the date and one for the info (which in turn has 3 rows: 1 for image icon, one for Temp and one for RH)-->
+                            <!-- Also adding margins and paddings (see below)-->
+                            <!-- Spacing Source: https://getbootstrap.com/docs/4.0/utilities/spacing/ -->
+
+                            <!-- Card 1-->
+                            <div class="col" id=cardDay1>
+
+                                <!-- Here goes the card for day 1-->
+                                <div class="card text-dark" id="card5dayforecastD1">
+
+                                    <!-- Here goes the card header-->
+                                    <div class="card-header card5day-header" id="card5dayHeaderD1">04/20</div>
+
+                                        <!-- Here goes the card body divided in 3: wrap, temp and RH-->
+                                        <div class="card-body single-day-body">
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay1 style="font-size: 15px; text-align: center">Temp:</div>
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay1 style="font-size: 15px; text-align: center">Rain %:</div>
+                                        </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Card 2-->
+                            <div class="col" id=cardDay2></div>
+
+
+                                <!-- Here goes the card for day 2-->
+                                <div class="card text-dark" id="card5dayforecastD2">
+
+                                    <!-- Here goes the card header-->
+                                    <div class="card-header card5day-header" id="card5dayHeaderD2">04/21</div>
+
+                                        <!-- Here goes the card body divided in 3: wrap, temp and RH-->
+                                        <div class="card-body single-day-body">
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay2 style="font-size: 15px; text-align: center">Temp:</div>
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay2 style="font-size: 15px; text-align: center">Rain %:</div>
+                                        </div>
+                                </div>
+
+                            <!-- Card 3-->
+                            <div class="col" id=cardDay3></div>
+
+                                <!-- Here goes the card for day 3-->
+                                <div class="card text-dark" id="card5dayforecastD3">
+
+                                    <!-- Here goes the card header-->
+                                    <div class="card-header card5day-header" id="card5dayHeaderD3">04/22</div>
+
+                                        <!-- Here goes the card body divided in 3: wrap, temp and RH-->
+                                        <div class="card-body single-day-body">
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay3 style="font-size: 15px; text-align: center">Temp:</div>
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay3 style="font-size: 15px; text-align: center">Rain %:</div>
+                                        </div>
+                                </div>
+                                
+
+                            <!-- Card 4-->
+                            <div class="col" id=cardDay4></div>
+
+                                <!-- Here goes the card for day 4-->
+                                <div class="card text-dark" id="card5dayforecastD4">
+
+                                    <!-- Here goes the card header-->
+                                    <div class="card-header card5day-header" id="card5dayHeaderD4">04/23</div>
+
+                                        <!-- Here goes the card body divided in 3: wrap, temp and RH-->
+                                        <div class="card-body single-day-body">
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay4 style="font-size: 15px; text-align: center">Temp:</div>
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay4 style="font-size: 15px; text-align: center">Rain %:</div>
+                                        </div>
+                                </div>
+
+                            <!-- Card 5-->
+                            <div class="col" id=cardDay5></div>
+
+                                <!-- Here goes the card for day 1-->
+                                <div class="card text-dark" id="card5dayforecastD5">
+
+                                    <!-- Here goes the card header-->
+                                    <div class="card-header card5day-header" id="card5dayHeaderD5">04/24</div>
+
+                                        <!-- Here goes the card body divided in 3: wrap, temp and RH-->
+                                        <div class="card-body single-day-body">
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay5 style="font-size: 15px; text-align: center">Temp:</div>
+                                            <div class="row my-row" id=card5dayForecastTemperatureDay5 style="font-size: 15px; text-align: center">Rain %:</div>
+                                        </div>
+                                </div>
+
+
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
 
                 
         </div>
 
         </div>
+
     </div>
 
 <!-- ------------------------------------------------------------- -->
