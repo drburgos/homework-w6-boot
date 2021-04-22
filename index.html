@@ -117,7 +117,9 @@
                 <div class="card border-dark" id="areaCitySelectedWeather" style="width: 100%">
 
                     <!-- Card Header "Search for a City"-->
-                    <div class="card-header" id="currentCityDate">Place Holder Text City Selected</div>
+                    <div class="card-header" id="currentCityName">
+                        Holder Text City Selected 
+                    </div>
 
                     <!-- Card Body Whole Thing / Info: Temperature / Humidity / WindSpeed / UV Index-->
                     <div class="card-body text-dark" id="currentCityBody">
@@ -126,12 +128,18 @@
                         <div class="col-8 m-coly">
 
                             <!-- Here go the rows: Temperature / Humidity / WindSpeed / UV Index -->
-                            <div class="row my-row">Temperature:
+                            <div class="row my-row">Temperature:  
                                 <span id="currentTemperature"></span> 
                             </div>
-                            <div class="row my-row" id="currentHumidity">Humidity:</div>
-                            <div class="row my-row" id="currentWindSpeed">Wind Speed:</div>
-                            <div class="row my-row" id="currentUvIndex">UV Index:</div>
+                            <div class="row my-row">Humidity:  
+                                <span id="currentHumidity"></span>
+                            </div>
+                            <div class="row my-row">Wind Speed:  
+                                <span id="currentWindSpeed"></span>
+                            </div>
+                            <div class="row my-row">UV Index:  
+                                <span id="currentUvIndex"></span>
+                            </div>
 
                         </div>
 
@@ -167,7 +175,7 @@
                                 <div class="card text-dark" id="card5dayforecastD1">
 
                                     <!-- Here goes the card header-->
-                                    <div class="card-header card5day-header" id="card5dayHeaderD1">04/20</div>
+                                    <div class="card-header card5day-header" id="card5dayHeaderD1">MM/D0</div>
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
@@ -186,7 +194,7 @@
                                 <div class="card text-dark" id="card5dayforecastD2">
 
                                     <!-- Here goes the card header-->
-                                    <div class="card-header card5day-header" id="card5dayHeaderD2">04/21</div>
+                                    <div class="card-header card5day-header" id="card5dayHeaderD2">MM/D1</div>
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
@@ -202,7 +210,7 @@
                                 <div class="card text-dark" id="card5dayforecastD3">
 
                                     <!-- Here goes the card header-->
-                                    <div class="card-header card5day-header" id="card5dayHeaderD3">04/22</div>
+                                    <div class="card-header card5day-header" id="card5dayHeaderD3">MM/D2</div>
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
@@ -219,7 +227,7 @@
                                 <div class="card text-dark" id="card5dayforecastD4">
 
                                     <!-- Here goes the card header-->
-                                    <div class="card-header card5day-header" id="card5dayHeaderD4">04/23</div>
+                                    <div class="card-header card5day-header" id="card5dayHeaderD4">MM/D3</div>
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
@@ -235,7 +243,7 @@
                                 <div class="card text-dark" id="card5dayforecastD5">
 
                                     <!-- Here goes the card header-->
-                                    <div class="card-header card5day-header" id="card5dayHeaderD5">04/24</div>
+                                    <div class="card-header card5day-header" id="card5dayHeaderD5">MM/D4</div>
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
@@ -278,6 +286,11 @@
 
 <!-- And our Javascript File-->
 <script type="text/javascript" src="./assets/script.js"></script>
+
+<!-- Moment-->
+<!--Link to Moment.js 2.24.0-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
 
 </body>
 
