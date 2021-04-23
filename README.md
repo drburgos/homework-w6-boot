@@ -1,4 +1,4 @@
-06 Server-Side APIs: LIVE DEMO: https://drburgos.github.io/homework-w6/
+06 Server-Side APIs: LIVE DEMO: https://drburgos.github.io/homework-w6-boot/
 
 Assignment: create a Weather Dashboard.
 
