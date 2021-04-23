@@ -82,23 +82,15 @@
 
                         <!-- Buttons were formated as secondary and block size-->
                         <!-- Formating source: https://getbootstrap.com/docs/4.0/components/buttons/-->
+
+                    <!-- Added a Div to wrap last minute-->
+                    <div id="recentCities">  
                         <div class="card">
                             <div class="card-body">
                                 <button type="button" class="btn btn-outline-secondary btn-block">City 1</button>
                             </div>
                         </div>
-                        
-                        <div class="card">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-outline-secondary btn-block">City 2</button>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <div class="card-body">
-                                <button type="button" class="btn btn-outline-secondary btn-block">City 3</button>
-                            </div>
-                        </div>
+                    </div>  
 
 
                     </div>
@@ -129,13 +121,16 @@
 
                             <!-- Here go the rows: Temperature / Humidity / WindSpeed / UV Index -->
                             <div class="row my-row">Temperature:  
-                                <span id="currentTemperature"></span> 
+                                <span id="currentTemperature"></span>
+                                <span>C</span> 
                             </div>
                             <div class="row my-row">Humidity:  
                                 <span id="currentHumidity"></span>
+                                <span>%</span>
                             </div>
                             <div class="row my-row">Wind Speed:  
                                 <span id="currentWindSpeed"></span>
+                                <span>MPH</span>
                             </div>
                             <div class="row my-row">UV Index:  
                                 <span id="currentUvIndex"></span>
@@ -179,8 +174,12 @@
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay1 style="font-size: 15px; text-align: center">Temp:</div>
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay1 style="font-size: 15px; text-align: center">Rain %:</div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Temp:
+                                            <span id="card5dayForecastTemperatureDay1"></span><span>C</span>
+                                            </div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Wind:
+                                            <span id="card5dayForecastWindDay1"></span>
+                                            <span>mph</span></div>
                                         </div>
                                 </div>
 
@@ -198,8 +197,12 @@
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay2 style="font-size: 15px; text-align: center">Temp:</div>
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay2 style="font-size: 15px; text-align: center">Rain %:</div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Temp:
+                                                <span id=card5dayForecastTemperatureDay2></span><span>C</span>
+                                            </div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Wind:
+                                            <span id=card5dayForecastWindDay2></span><span>mph</span>
+                                        </div>
                                         </div>
                                 </div>
 
@@ -214,8 +217,10 @@
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay3 style="font-size: 15px; text-align: center">Temp:</div>
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay3 style="font-size: 15px; text-align: center">Rain %:</div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Temp:<span id=card5dayForecastTemperatureDay3></span><span>C</span>
+                                            </div>
+                                            <div class="row my-row" style="font-size: 10px; text-align: center">Wind: <span id=card5dayForecastWindDay3 ></span>
+                                                <span>mph</span></div>
                                         </div>
                                 </div>
                                 
@@ -231,8 +236,10 @@
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay4 style="font-size: 15px; text-align: center">Temp:</div>
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay4 style="font-size: 15px; text-align: center">Rain %:</div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Temp:<span id=card5dayForecastTemperatureDay4></span><span>C</span>
+                                            </div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Wind:<span id=card5dayForecastWindDay4></span>
+                                                <span>mph</span></div>
                                         </div>
                                 </div>
 
@@ -247,8 +254,11 @@
 
                                         <!-- Here goes the card body divided in 3: wrap, temp and RH-->
                                         <div class="card-body single-day-body">
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay5 style="font-size: 15px; text-align: center">Temp:</div>
-                                            <div class="row my-row" id=card5dayForecastTemperatureDay5 style="font-size: 15px; text-align: center">Rain %:</div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Temp:<span id=card5dayForecastTemperatureDay5></span><span>C</span>
+                                            </div>
+                                            <div class="row my-row"  style="font-size: 10px; text-align: center">Wind:<span id=card5dayForecastWindDay5></span>
+                                            <span>mph</span>
+                                            </div>
                                         </div>
                                 </div>
 

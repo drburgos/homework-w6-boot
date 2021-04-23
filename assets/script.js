@@ -51,8 +51,7 @@ function getWeatherInformation (cityName) {
     
     // 3.1.3 Modifying variable to include the city that was entered.
     requestUrl= requestUrl + cityName + "&appid=" + API_KEY;
-
-
+    
 
     // 3.1.4. Adding fetch function to go to json and be able to use it extracting latitude and longitude.
     fetch(requestUrl) 
@@ -63,8 +62,6 @@ function getWeatherInformation (cityName) {
         })
 
     // When it reaches this point the data is in JSON format
-    // However the JSON only has latitude and longitude so we need to get the weather information specifically.
-    // How I resolved it is by using another Openweather API called "One Call" URL: https://openweathermap.org/current
     // Doing a then and calling a function with parameter cityData where I'm storing the JSON. 
         .then(function (cityData) {
 
@@ -77,6 +74,88 @@ function getWeatherInformation (cityName) {
         const humidity = cityData.main.humidity;
         const windSpeed = cityData.wind.speed;
 
+
+// last minute additions (after class) need a 2nd api to get lat and long.
+        const lat = cityData.coord.lat;
+        const lon = cityData.coord.lon;
+        console.log (lat);
+        console.log (lon);
+
+// added a 2nd api to get future weather.
+        const BASE_URL2 = "https://api.openweathermap.org/data/2.5/onecall?";
+
+// creating a variable to fetch the info from the new api
+        let requestUrl2 = BASE_URL2 + "lat=" + lat + "&lon=" + lon + "&units=metric" + "&appid=" + API_KEY;
+
+// fetching info.
+    fetch(requestUrl2) 
+
+// info comes back as a promise
+        .then(function(cityData2) {
+
+// transforming info into a json
+        return cityData2.json();
+     })
+
+// creating parameter cityData2 where I'm storing the json
+        .then(function (cityData2) {
+        console.log(cityData2);
+
+// creating variable uv to store uv info fetched from json
+        var uv = cityData2.daily[0].uvi;
+        console.log(uv);
+// changing info in screen
+        const uvText = document.getElementById("currentUvIndex");
+        uvText.innerText = uv; 
+
+// creating variables tempPlus and windPlus to store tomorrows info 
+        var tempPlus1 = cityData2.daily[1].temp.day;
+        var windPlus1 = cityData2.daily[1].wind_speed;
+
+        const tempPlus1Text = document.getElementById("card5dayForecastTemperatureDay1");
+        tempPlus1Text.innerText = tempPlus1;
+        const rainPlus1Text = document.getElementById("card5dayForecastWindDay1");
+        rainPlus1Text.innerText = windPlus1;   
+
+
+        var tempPlus2 = cityData2.daily[2].temp.day;
+        var windPlus2 = cityData2.daily[2].wind_speed;
+
+        const tempPlus2Text = document.getElementById("card5dayForecastTemperatureDay2");
+        tempPlus2Text.innerText = tempPlus2;
+        const rainPlus2Text = document.getElementById("card5dayForecastWindDay2");
+        rainPlus2Text.innerText = windPlus2; 
+
+
+        var tempPlus3 = cityData2.daily[3].temp.day;
+        var windPlus3 = cityData2.daily[3].wind_speed;
+
+        const tempPlus3Text = document.getElementById("card5dayForecastTemperatureDay3");
+        tempPlus3Text.innerText = tempPlus3;
+        const rainPlus3Text = document.getElementById("card5dayForecastWindDay3");
+        rainPlus3Text.innerText = windPlus3; 
+
+
+        var tempPlus4 = cityData2.daily[4].temp.day;
+        var windPlus4 = cityData2.daily[4].wind_speed;
+
+        const tempPlus4Text = document.getElementById("card5dayForecastTemperatureDay4");
+        tempPlus4Text.innerText = tempPlus4;
+        const rainPlus4Text = document.getElementById("card5dayForecastWindDay4");
+        rainPlus4Text.innerText = windPlus4; 
+        
+
+        var tempPlus5 = cityData2.daily[5].temp.day;
+        var windPlus5 = cityData2.daily[5].wind_speed;
+
+        const tempPlus5Text = document.getElementById("card5dayForecastTemperatureDay5");
+        tempPlus5Text.innerText = tempPlus5;
+        const rainPlus5Text = document.getElementById("card5dayForecastWindDay5");
+        rainPlus5Text.innerText = windPlus4; 
+
+        });
+
+
         //Modifying display in the board with the information
         const temperatureText = document.getElementById("currentTemperature");
         temperatureText.innerText = roundedTemp;
@@ -85,7 +164,9 @@ function getWeatherInformation (cityName) {
         humidityText.innerText = humidity;
 
         const windSpeedText = document.getElementById("currentWindSpeed");
-        windSpeedText.innerText = windSpeed;     
+        windSpeedText.innerText = windSpeed; 
+        
+
 
         
         //Doing same process to substitute Place Holder Text City 
@@ -127,6 +208,22 @@ function getWeatherInformation (cityName) {
         var forecastCardDay5 = document.getElementById("card5dayHeaderD5");
         forecastCardDay5.innerText = datePlus4;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Added last moment to continue functionality with part 4 (see below)
+            saveRecentCities(city);
+
         })
     
 
@@ -134,3 +231,17 @@ function getWeatherInformation (cityName) {
     console.log("Este se ejecuta antes de la promesa")
 
 }
+
+// 4. Next step is to add functionality to add buttons and store in local storage.
+
+// 4.1 Defining a function and passing down the city name value
+ function saveRecentCities (cityNameToSave) {
+    
+    // defining the name to store in local storage
+    const weatherLocalStorageKey = "weather-app";
+
+    // go to localStorage to see whether the key exists
+
+
+
+ }
