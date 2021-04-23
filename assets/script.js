@@ -45,7 +45,7 @@ function getWeatherInformation (cityName) {
     const API_KEY = "3811eb5e7320e92569d4380a3f96e0a0";
     // 3.1.2 You need a URL
     // NOTE to person who is grading: I know that the excercise requires to go to the one call API (https://openweathermap.org/api/one-call-api). However for some reason I was not able to access it for free so I'm using "Current Weather Data"
-    const BASE_URL = "http://api.openweathermap.org/data/2.5";
+    const BASE_URL = "https://api.openweathermap.org/data/2.5";
     // saving request url to a variable using Current Weather API
     let requestUrl = BASE_URL + "/weather?q=";
     
