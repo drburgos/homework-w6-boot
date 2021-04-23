@@ -112,6 +112,7 @@ function getWeatherInformation (cityName) {
         var tempPlus1 = cityData2.daily[1].temp.day;
         var windPlus1 = cityData2.daily[1].wind_speed;
 
+        // created changes in weather information
         const tempPlus1Text = document.getElementById("card5dayForecastTemperatureDay1");
         tempPlus1Text.innerText = tempPlus1;
         const rainPlus1Text = document.getElementById("card5dayForecastWindDay1");
@@ -173,9 +174,11 @@ function getWeatherInformation (cityName) {
         const city = cityData.name;
         console.log(city);
 
+        var dateNow = moment().format('MMMM Do YYYY');
+
         var cityNameText = document.getElementById("currentCityName");
         console.log(cityNameText);
-        cityNameText.innerText = city;        
+        cityNameText.innerText = city + ":" + "  " + dateNow;        
 
 
         //Defining variable month/date to call moment
@@ -241,7 +244,7 @@ function getWeatherInformation (cityName) {
     const weatherLocalStorageKey = "weather-app";
 
     // go to localStorage to see whether the key exists
-
+//SORRY... COULDN'T FINISH :(
 
 
  }
